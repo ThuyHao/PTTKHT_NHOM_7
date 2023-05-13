@@ -183,6 +183,12 @@
             class="app-menu__label">Lịch công tác </span></a></li>
       <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-cog'></i><span class="app-menu__label">Cài
             đặt hệ thống</span></a></li>
+            <li>
+              <a class="app-menu__item" href="InventoryManagerment.html"
+                ><i class="app-menu__icon bx bx-cog"></i
+                ><span class="app-menu__label">Quản lý kiểm kê</span></a
+              >
+            </li>
     </ul>
   </aside>
   <main class="app-content">
@@ -427,9 +433,9 @@ MODAL
     const inpFile = document.getElementById("inpFile");
     const loadFile = document.getElementById("loadFile");
     const previewContainer = document.getElementById("imagePreview");
-    const previewContainer1 = document.getElementById("imagePreview");
+
     const previewImage = previewContainer.querySelector(".image-preview__image");
-    const previewDefaultText = previewContainer1.querySelector(".image-preview__default-text");
+    const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
     inpFile.addEventListener("change", function () {
       const file = this.files[0];
       if (file) {
