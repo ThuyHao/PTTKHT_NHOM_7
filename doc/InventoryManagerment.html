@@ -32,8 +32,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css"
     />
-    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <style>
       #renderInven{
         height: 500px;
@@ -63,95 +64,8 @@
     </header>
     <!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-    <aside class="app-sidebar">
-      <div class="app-sidebar__user">
-        <img
-          class="app-sidebar__user-avatar"
-          src="/images/avt.jpg"
-          width="50px"
-          height="50px"
-          alt="User Image"
-        />
-        <div>
-          <p class="app-sidebar__user-name"><b>Nguyễn Nhật Linh</b></p>
-          <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
-        </div>
-      </div>
-      <hr />
-      <ul class="app-menu">
-        <li>
-          <a class="app-menu__item haha" href="phan-mem-ban-hang.html"
-            ><i class="app-menu__icon bx bx-cart-alt"></i>
-            <span class="app-menu__label">POS Bán Hàng</span></a
-          >
-        </li>
-        <li>
-          <a class="app-menu__item" href="index.html"
-            ><i class="app-menu__icon bx bx-tachometer"></i
-            ><span class="app-menu__label">Bảng điều khiển</span></a
-          >
-        </li>
-        <li>
-          <a class="app-menu__item" href="table-data-table.html"
-            ><i class="app-menu__icon bx bx-id-card"></i>
-            <span class="app-menu__label">Quản lý nhân viên</span></a
-          >
-        </li>
-        <li>
-          <a class="app-menu__item" href="#"
-            ><i class="app-menu__icon bx bx-user-voice"></i
-            ><span class="app-menu__label">Quản lý khách hàng</span></a
-          >
-        </li>
-        <li>
-          <a class="app-menu__item" href="table-data-product.html"
-            ><i class="app-menu__icon bx bx-purchase-tag-alt"></i
-            ><span class="app-menu__label">Quản lý sản phẩm</span></a
-          >
-        </li>
-        <li>
-          <a class="app-menu__item " href="table-data-oder.html"
-            ><i class="app-menu__icon bx bx-task"></i
-            ><span class="app-menu__label">Quản lý đơn hàng</span></a
-          >
-        </li>
-        <li>
-          <a class="app-menu__item" href="table-data-banned.html"
-            ><i class="app-menu__icon bx bx-run"></i
-            ><span class="app-menu__label">Quản lý nội bộ </span></a
-          >
-        </li>
-        <li>
-          <a class="app-menu__item" href="table-data-money.html"
-            ><i class="app-menu__icon bx bx-dollar"></i
-            ><span class="app-menu__label">Bảng kê lương</span></a
-          >
-        </li>
-        <li>
-          <a class="app-menu__item" href="quan-ly-bao-cao.html"
-            ><i class="app-menu__icon bx bx-pie-chart-alt-2"></i
-            ><span class="app-menu__label">Báo cáo doanh thu</span></a
-          >
-        </li>
-        <li>
-          <a class="app-menu__item" href="page-calendar.html"
-            ><i class="app-menu__icon bx bx-calendar-check"></i
-            ><span class="app-menu__label">Lịch công tác </span></a
-          >
-        </li>
-        <li>
-          <a class="app-menu__item" href="#"
-            ><i class="app-menu__icon bx bx-cog"></i
-            ><span class="app-menu__label">Cài đặt hệ thống</span></a
-          >
-        </li>
-        <li>
-          <a class="app-menu__item active" href="InventoryManagerment.html"
-            ><i class="app-menu__icon bx bx-cog"></i
-            ><span class="app-menu__label">Quản lý kiểm kê</span></a
-          >
-        </li>
-      </ul>
+    <aside class="app-sidebar" id="main-SideBar">
+      
     </aside>
     <main class="app-content">
       <div class="app-title">
@@ -257,21 +171,12 @@
     <!-- Page specific javascripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <!-- Data table plugin-->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
-    />
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
     <script src="js/jslordcard.js" ></script>
+    <srript src="/doc/js/plugins/sidebar.js"></srript>
     <script>
-     
+     renderSideBar("inventory");
       var oTable;
       var data = localStorage.getItem('Inventory');
       if(data==null){
@@ -281,6 +186,7 @@
       
       var listInven = JSON.parse(data);
       $(document).ready(function () {
+        console.log(listAccount);
         oTable = $("#sampleTable").DataTable({
           rowId: "row_num",
           columnDefs: [
@@ -324,7 +230,9 @@
                     <td>${openTr}${listInven[i].status}</span></td>
                     <td>
                       <button class="btn btn-primary btn-sm bg-info" type="button" title="Chi tiết" id="show-emp" data-toggle="modal"
-                      data-target="#ModalUP" onclick="Watching(this)"><i class="fas fa-edit"></i></button>
+                      data-target="#ModalUP" onclick="Watching(this)"><i class="fas fa-eye"></i></button>
+                      <button class="btn btn-primary btn-sm bg-info" type="button" title="Xác nhận" id="show-emp" data-toggle="modal"
+                      data-target="#ModalUP" onclick="setting(this)"><i class="fas fa-edit"></i></button>
                       </td>
                         </tr>`;
         }
@@ -438,11 +346,14 @@
       // });
 
       //Modal
-    
-      function Watching(button){
-
-
+      function setting(button){
+        
         let tdArray = $($(button).closest("tr")).find("td");
+        $("#titleInven").html("Xác nhận phiếu kiểm kê");
+        $("#renderAction").html(`
+        <button class="btn btn-save" type="button" onclick="submitChange()">Lưu lại</button>
+          <a class="btn btn-cancel" data-dismiss="modal" href="#">Hủy</a>
+        `);
             let id = $(tdArray[1]).text();
             let invenData="";
             let productList;
@@ -497,7 +408,86 @@
               <label class="control-label">Ước lượng ${productList[j].quantity}</label>
             </div>
             <div class="form-group  col-md-6">
-              <input class="form-control realQuantity" type="text"  value="${productList[j].realQuantity}">
+              <input class="form-control realQuantity" type="text" value="${productList[j].realQuantity}">
+          
+            </div>
+              `
+            }
+           
+            $("#renderInven").append(invenData);
+                      return;
+                  }
+            }
+          
+
+
+         
+         
+      }
+      function Watching(button){
+
+
+        let tdArray = $($(button).closest("tr")).find("td");
+            let id = $(tdArray[1]).text();
+            let invenData="";
+            $("#titleInven").html("Chi tiết phiếu kiểm kê");
+            $("#renderAction").html(`
+    
+          <a class="btn btn-cancel" data-dismiss="modal" href="#">Ok</a>
+        `);
+            let productList;
+            $("#renderInven").html(` <div class="form-group col-md-6">
+                <label class="control-label" >Mã phiếu kiểm kê </label>
+                <input class="form-control" id="kkid" disabled type="text" value="">
+              </div>
+            <div class="form-group col-md-6">
+                <label class="control-label">Người kiểm kê</label>
+              <input class="form-control" id="kkus" type="text" disabled required value="">
+            </div>
+            <div class="form-group  col-md-6">
+                <label class="control-label">Tình trạng</label>
+              <input class="form-control" id="kkst" type="text" disabled required value="">
+            </div>
+            <div class="form-group  col-md-6">
+              <label class="control-label">Mô tả</label>
+              <input class="form-control" id="kkds" type="text" disabled required value="">
+            </div>
+            <div class="form-group  col-md-6">
+              <label class="control-label">Ngày tạo</label>
+              <input class="form-control" id="kkca" type="text" disabled required value="">
+            </div>
+            <div class="form-group  col-md-6">
+              <label class="control-label">Ngày xác nhận</label>
+              <input class="form-control" id="kkcf" type="text" disabled required value="">
+            </div>
+            <div class="form-group  col-md-6">
+              <label class="control-label">Danh sách sản phẩm</label>
+             
+            </div>
+            <div class="form-group  col-md-6">
+              <label class="control-label">Số liệu thực tế</label>
+            
+            </div>`);
+            $("#kkid").val(id);
+            for( let i =0 ; i <listInven.length;i++){
+                  if(listInven[i].id==id){
+            $("#kkus").val(listInven[i].checkBy);
+            $("#kkst").val(listInven[i].status);
+            $("#kkds").val(listInven[i].description);
+            $("#kkca").val(listInven[i].createAt);
+            $("#kkcf").val(listInven[i].checkAt)
+             productList = listInven[i].listProduct;
+           
+            for(let j=0;j<productList.length;j++){
+           
+                   
+              invenData+=`
+              <div class="form-group  col-md-6">
+              <label class="control-label">${productList[j].name}</label> -
+              <label class="control-label">Ước lượng ${productList[j].quantity}</label>
+            </div>
+            <div class="form-group  col-md-6">
+              <input class="form-control realQuantity" disabled type="text" value="${productList[j].realQuantity}">
           
             </div>
               `
@@ -551,21 +541,25 @@ return dateString;
                       if(checkNumber(value)){
                         oldProduct[j].realQuantity=value;
                       }else{
-                        Swal.fire(
-  'Good job!',
-  'Lỗi dữ liệu, dữ liệu phải là số!',
-  'error'
-)
+                       swal({
+      title: "",
+      text:  'Lỗi dữ liệu, dữ liệu phải là số!',
+      icon: "error",
+      close: true,
+      button: "OK",
+    });
 return;
                       }
                         
                     }
-                    
-            Swal.fire(
-  'Good job!',
-  'Xác nhận thành công!',
-  'success'
-)
+                    swal({
+      title: "",
+      text: "Xác nhận thành công!",
+      icon: "success",
+      close: true,
+      button: "OK",
+    });
+ 
             
               localStorage.setItem("Inventory", JSON.stringify(listInven));
               data = localStorage.getItem('Inventory');
@@ -587,7 +581,7 @@ return;
           <div class="row">
             <div class="form-group  col-md-12">
               <span class="thong-tin-thanh-toan">
-                <h5>Chi tiết phiếu kiểm kê</h5>
+                <h5 id="titleInven">Chi tiết phiếu kiểm kê</h5>
               </span>
             </div>
           </div>
@@ -597,8 +591,9 @@ return;
           <BR>
           <BR>
           <BR>
-          <button class="btn btn-save" type="button" onclick="submitChange()">Lưu lại</button>
-          <a class="btn btn-cancel" data-dismiss="modal" href="#">Hủy bỏ</a>
+            <div id="renderAction">
+
+            </div>
           <BR>
         </div>
         <div class="modal-footer">

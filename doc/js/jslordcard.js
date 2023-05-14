@@ -227,3 +227,41 @@ function createInstance() {
   localStorage.setItem("Inventory", JSON.stringify(InventoryList));
 }
 
+function createListAccount(){
+  let AccountList = [
+    {
+     username:"admin",
+     password:"123456",
+     role:"admin"
+    },
+    {
+      username:"inventoryManager",
+      password:"123456",
+      role:"inventoryManager"
+     },
+     {
+      username:"shipper",
+      password:"123456",
+      role:"shipper"
+     },
+     {
+      username:"inventory",
+      password:"123456",
+      role:"inventory"
+     },
+     {
+      username:"accounting",
+      password:"123456",
+      role:"accounting"
+     },]
+     localStorage.setItem("Accounts", JSON.stringify(AccountList));
+}
+  
+var accounts;
+var accounts = localStorage.getItem('Accounts');
+if(accounts==null){
+  createListAccount();
+  accounts = localStorage.getItem('Accounts');
+}
+
+var listAccount = JSON.parse(accounts);
