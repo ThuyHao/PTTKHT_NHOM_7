@@ -497,7 +497,7 @@
               <label class="control-label">Ước lượng ${productList[j].quantity}</label>
             </div>
             <div class="form-group  col-md-6">
-              <input class="form-control realQuantity" type="number"  value="${productList[j].realQuantity}">
+              <input class="form-control realQuantity" type="text"  value="${productList[j].realQuantity}">
           
             </div>
               `
@@ -515,6 +515,12 @@
           
           
       }
+      function checkNumber(value)
+{
+
+    var regex=/^[0-9]+$/;
+    return value.match(regex);
+}
       function getNow(){
         let today = new Date();
 let day = today.getDate();
@@ -541,12 +547,23 @@ return dateString;
                     listInven[i].status="Đã xác nhận";
                     oldProduct=listInven[i].listProduct;
                     for(let j=0;j<oldProduct.length;j++){
-                        oldProduct[j].realQuantity=listNewValue[j];
+                      let value = listNewValue[j];
+                      if(checkNumber(value)){
+                        oldProduct[j].realQuantity=value;
+                      }else{
+                        Swal.fire(
+  'Good job!',
+  'Lỗi dữ liệu, dữ liệu phải là số!',
+  'error'
+)
+return;
+                      }
+                        
                     }
                     
             Swal.fire(
   'Good job!',
-  'You clicked the button!',
+  'Xác nhận thành công!',
   'success'
 )
             
