@@ -37,44 +37,7 @@
   </header>
   <!-- Sidebar menu-->
   <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-  <aside class="app-sidebar">
-    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/324923906_690664442543148_1752832179266753806_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=e3f864&_nc_ohc=pjY8H-dT-IIAX8rA8xi&_nc_oc=AQm9rAxCXTPVKKdWkIM-9xz7gJ3SrhF5XqcbwmlOYaltc2XS-fxF2NmC0P-0_XVoHt4&_nc_ht=scontent.fsgn5-12.fna&oh=00_AfCBzHpsrg6ZTJW-qc3BC7h9_lKldudlG4WUzcAR0xiQrg&oe=64635A8E" width="50px"
-        alt="User Image">
-      <div>
-        <p class="app-sidebar__user-name"><b>Lê Minh Long</b></p>
-        <p class="app-sidebar__user-designation">Nhân viên quản lý kho</p>
-      </div>
-    </div>
-    <hr>
-    <ul class="app-menu">
-      <li><a class="app-menu__item haha" href="phan-mem-ban-hang.html"><i
-                  class='app-menu__icon bx bx-cart-alt'></i>
-              <span class="app-menu__label">POS Bán Hàng</span></a></li>
-      <li><a class="app-menu__item " href="index.html"><i class='app-menu__icon bx bx-tachometer'></i><span
-                  class="app-menu__label">Bảng điều khiển</span></a></li>
-      
-      <li><a class="app-menu__item active" href="table-data-product.html"><i
-                  class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý sản
-                  phẩm</span></a>
-      </li>
-      <li><a class="app-menu__item" href="AssetManagerPage.html"><i
-          class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý tài sản</span></a>
-    </li>
-      <li><a class="app-menu__item" href="table-data-oder.html"><i class='app-menu__icon bx bx-task'></i><span
-                  class="app-menu__label">Quản lý đơn hàng</span></a></li>
-     
-      <li><a class="app-menu__item" href="table-data-money.html"><i class='app-menu__icon bx bx-dollar'></i><span
-                  class="app-menu__label">Kiểm kê kho</span></a></li>
-      <li><a class="app-menu__item" href="page-calendar.html"><i
-                  class='app-menu__icon bx bx-calendar-check'></i><span class="app-menu__label">Lịch công tác
-              </span></a></li>
-              <li><a class="app-menu__item" href="diemdanh.html"><i
-                class='app-menu__icon bx bx-calendar-check'></i><span class="app-menu__label">Điểm danh
-            </span></a></li>
-      <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-cog'></i><span
-                  class="app-menu__label">Cài
-                  đặt hệ thống</span></a></li>
-  </ul>
+  <aside class="app-sidebar" id="main-SideBar">
   </aside>
   <main class="app-content">
     <div class="row">
@@ -127,6 +90,8 @@
     <script type="text/javascript" src="js/plugins/moment.min.js"></script>
     <script type="text/javascript" src="js/plugins/jquery-ui.custom.min.js"></script>
     <script type="text/javascript" src="js/plugins/fullcalendar.min.js"></script>
+    <script src="/doc/js/plugins/sidebar.js"></script>
+    <script>renderSideBar("inventory");</script>
     <script type="text/javascript">
       $(document).ready(function() {
       
