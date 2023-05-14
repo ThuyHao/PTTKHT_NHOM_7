@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Danh sách nhân viên | Quản trị Admin</title>
+  <title>Quản lí sản phẩm | Quản trị Admin</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +20,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
 
 </head>
+<style>
+  .sort-select {
+    float: right;
+    position: absolute;
+    margin-bottom: 10px;
+    z-index: 999;
+  }
+
+  .sort-select-main {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+    top: 30px;
+    right: 0;
+    width: 160px;
+  }
+
+  .sort-select-main p {
+    border-bottom: 1px solid #f1f1f1;
+    ;
+
+  }
+</style>
 
 <body onload="time()" class="app sidebar-mini rtl">
   <!-- Navbar-->
@@ -39,49 +62,46 @@
   <!-- Sidebar menu-->
   <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
   <aside class="app-sidebar">
-    <div class="app-sidebar__user"><a href="page-infomation-account.html">
-      <img class="app-sidebar__user-avatar" src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/324923906_690664442543148_1752832179266753806_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=e3f864&_nc_ohc=pjY8H-dT-IIAX8rA8xi&_nc_oc=AQm9rAxCXTPVKKdWkIM-9xz7gJ3SrhF5XqcbwmlOYaltc2XS-fxF2NmC0P-0_XVoHt4&_nc_ht=scontent.fsgn5-12.fna&oh=00_AfCEZpZon7ZzMXgZKLCnsRJpU7FYKbA6RPCf5yB-HTeMgg&oe=646554CE" width="50px"
-        alt="User Image"></a>
+    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="/img-sanpham/cera.jpg" width="50px"
+        alt="User Image">
       <div>
-        <p class="app-sidebar__user-name"><b>Lê Minh Long</b></p>
+        <p class="app-sidebar__user-name"><b>Quản lí kho</b></p>
         <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
       </div>
     </div>
     <hr>
     <ul class="app-menu">
-      <li><a class="app-menu__item haha" href="phan-mem-ban-hang.html"><i
-                  class='app-menu__icon bx bx-cart-alt'></i>
-              <span class="app-menu__label">POS Bán Hàng</span></a></li>
+      <li><a class="app-menu__item haha" href="phan-mem-ban-hang.html"><i class='app-menu__icon bx bx-cart-alt'></i>
+          <span class="app-menu__label">POS Bán Hàng</span></a></li>
       <li><a class="app-menu__item " href="index.html"><i class='app-menu__icon bx bx-tachometer'></i><span
-                  class="app-menu__label">Bảng điều khiển</span></a></li>
-      
-      <li><a class="app-menu__item active" href="table-data-product.html"><i
-                  class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý sản
-                  phẩm</span></a>
+            class="app-menu__label">Bảng điều khiển</span></a></li>
+      <li><a class="app-menu__item " href="table-data-table.html"><i class='app-menu__icon bx bx-id-card'></i>
+          <span class="app-menu__label">Quản lý nhân viên</span></a></li>
+      <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-user-voice'></i><span
+            class="app-menu__label">Quản lý khách hàng</span></a></li>
+      <li><a class="app-menu__item active" href="Product_Management.html"><i
+            class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý sản phẩm</span></a>
       </li>
-      <li><a class="app-menu__item" href="AssetManagerPage.html"><i
-          class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý tài sản</span></a>
-    </li>
-      <li><a class="app-menu__item" href="table-data-oder.html"><i class='app-menu__icon bx bx-task'></i><span
-                  class="app-menu__label">Quản lý đơn hàng</span></a></li>
-     
+      <li><a class="app-menu__item " href="order_management.html"><i class='app-menu__icon bx bx-task'></i><span
+            class="app-menu__label">Quản lý đơn hàng</span></a></li>
+      <li><a class="app-menu__item" href="table-data-banned.html"><i class='app-menu__icon bx bx-run'></i><span
+            class="app-menu__label">Quản lý nội bộ
+          </span></a></li>
       <li><a class="app-menu__item" href="table-data-money.html"><i class='app-menu__icon bx bx-dollar'></i><span
-                  class="app-menu__label">Kiểm kê kho</span></a></li>
-      <li><a class="app-menu__item" href="page-calendar.html"><i
-                  class='app-menu__icon bx bx-calendar-check'></i><span class="app-menu__label">Lịch công tác
-              </span></a></li>
-              <li><a class="app-menu__item" href="diemdanh.html"><i
-                class='app-menu__icon bx bx-calendar-check'></i><span class="app-menu__label">Điểm danh
-            </span></a></li>
-      <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-cog'></i><span
-                  class="app-menu__label">Cài
-                  đặt hệ thống</span></a></li>
-  </ul>
+            class="app-menu__label">Bảng kê lương</span></a></li>
+      <li><a class="app-menu__item" href="quan-ly-bao-cao.html"><i
+            class='app-menu__icon bx bx-pie-chart-alt-2'></i><span class="app-menu__label">Báo cáo doanh thu</span></a>
+      </li>
+      <li><a class="app-menu__item" href="page-calendar.html"><i class='app-menu__icon bx bx-calendar-check'></i><span
+            class="app-menu__label">Lịch công tác </span></a></li>
+      <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-cog'></i><span class="app-menu__label">Cài
+            đặt hệ thống</span></a></li>
+    </ul>
   </aside>
   <main class="app-content">
     <div class="app-title">
       <ul class="app-breadcrumb breadcrumb side">
-        <li class="breadcrumb-item active"><a href="#"><b>Danh sách sản phẩm</b></a></li>
+        <li class="breadcrumb-item "><a href="#"><b>Danh sách sản phẩm</b></a></li>
       </ul>
       <div id="clock"></div>
     </div>
@@ -120,6 +140,22 @@
                 <a class="btn btn-delete btn-sm" type="button" title="Xóa" onclick="myFunction(this)"><i
                     class="fas fa-trash-alt"></i> Xóa tất cả </a>
               </div>
+              <div class="col-sm-2">
+                <a class="btn btn-delete btn-sm btn-filter " type="button" title="Lọc sản phẩm"
+                  onclick="functionFilter(this)"><i class="fa fa-filter"></i>Lọc</a>
+                <div class="sort-select" style="display: none;">
+                  <div class="sort-select-main sort " style="display: block;">
+                    <p><a href="javascript:;" class="" data-id="3" onclick="sortByNameAscending(this)"><i></i>Giá cao
+                        đến thấp</a></p>
+                    <p><a href="javascript:;" class="" data-id="2" onclick="sortByNameDescending(this)"><i></i>Giá thấp
+                        đến cao</a></p>
+                    <p><a href="javascript:;" class="" data-id="2" onclick="sortByNameAZ(this)"><i></i>Tên A-Z</a></p>
+                    <p><a href="javascript:;" class="" data-id="2" onclick="sortByNameZA(this)"><i></i>Tên Z-A</a></p>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
             <table class="table table-hover table-bordered" id="sampleTable">
               <thead>
@@ -150,8 +186,11 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                    <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
+
                   </td>
                 </tr>
                 <tr>
@@ -168,8 +207,11 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
+
                   </td>
                 </tr>
                 <tr>
@@ -186,8 +228,11 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
+
 
                   </td>
                 </tr>
@@ -205,8 +250,11 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
+
                   </td>
                 </tr>
                 <tr>
@@ -223,7 +271,9 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -241,7 +291,9 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -259,7 +311,9 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i> </button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -277,7 +331,9 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -295,7 +351,9 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -313,7 +371,9 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -331,7 +391,9 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -349,7 +411,9 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -367,7 +431,9 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -380,12 +446,17 @@
                   <td><span class="badge bg-success">Còn hàng</span></td>
                   <td>16.320.000 đ</td>
                   <td>Giường người lớn</td>
-                  <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-                      onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
+                  <td>
+                    <button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i
+                        class="fas fa-trash-alt"></i>
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
-                      data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                      data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i>0
+                    </button>
+
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -403,7 +474,9 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -421,7 +494,9 @@
                     </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
+                    <button class="btn btn-primary btn-sm edit" type="button" title="Xem" id="show-emp"
+                      data-toggle="modal" data-target="#ModalView"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button class="btn btn-primary btn-sm edit" type="button" title="Xem vị trí" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP2"><i class="fa fa-search-location"></i></button>
                   </td>
                 </tr>
@@ -476,6 +551,7 @@
             </div>
             <div class="form-group col-md-6">
               <label for="exampleSelect1" class="control-label">Danh mục</label>
+
               <select class="form-control" id="exampleSelect1">
                 <option>Bàn ăn</option>
                 <option>Bàn thông minh</option>
@@ -495,7 +571,7 @@
     color: #ea0000;">Chỉnh sửa sản phẩm nâng cao</a>
           <BR>
           <BR>
-          <button class="btn btn-save" type="button">Lưu lại</button>
+          <button class="btn btn-save editproduct" type="button" data-dismiss="modal" onclick="editRow()">Lưu lại</button>
           <a class="btn btn-cancel" data-dismiss="modal" href="#">Hủy bỏ</a>
           <BR>
         </div>
@@ -504,8 +580,9 @@
       </div>
     </div>
   </div>
-  
-  <!--
+
+
+<!--
 MODAL xem vị trí
 -->
 
@@ -535,6 +612,81 @@ data-keyboard="false">
 </div>
 </div>
 
+  <!--
+MODALview
+-->
+  <div class="modal fade" id="ModalView" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static"
+    data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <div class="row">
+            <div class="form-group  col-md-12">
+              <span class="thong-tin-thanh-toan">
+                <h5>Chỉnh sửa thông tin sản phẩm cơ bản</h5>
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label class="control-label">Mã sản phẩm </label>
+              <input class="form-control" type="number" value="71309005">
+            </div>
+            <div class="form-group col-md-6">
+              <label class="control-label">Tên sản phẩm</label>
+              <input class="form-control" type="text" required value="Bàn ăn gỗ Theresa">
+            </div>
+            <div class="form-group  col-md-6">
+              <label class="control-label">Số lượng</label>
+              <input class="form-control" type="number" required value="20">
+            </div>
+            <div class="form-group col-md-6 ">
+              <label for="exampleSelect1" class="control-label">Tình trạng sản phẩm</label>
+              <select class="form-control" id="exampleSelect1">
+                <option>Còn hàng</option>
+                <option>Hết hàng</option>
+                <option>Đang nhập hàng</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label class="control-label">Giá bán</label>
+              <input class="form-control" type="text" value="5.600.000">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="exampleSelect1" class="control-label">Danh mục</label>
+
+              <select class="form-control" id="exampleSelect1">
+                <option>Bàn ăn</option>
+                <option>Bàn thông minh</option>
+                <option>Tủ</option>
+                <option>Ghế gỗ</option>
+                <option>Ghế sắt</option>
+                <option>Giường người lớn</option>
+                <option>Giường trẻ em</option>
+                <option>Bàn trang điểm</option>
+                <option>Giá đỡ</option>
+              </select>
+            </div>
+          </div>
+          <BR>
+          <!-- <a href="#" style="    float: right;
+               font-weight: 600;
+                color: #ea0000;">Chỉnh sửa sản phẩm nâng cao</a> -->
+          <BR>
+          <BR>
+          <!-- <button class="btn btn-save" type="button" data-dismiss="modal">Lưu lại</button> -->
+          <a class="btn btn-cancel" data-dismiss="modal" href="#">Hủy bỏ</a>
+          <BR>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+MODALView
+-->
 
   <!-- Essential javascripts for application to work-->
   <script src="js/jquery-3.2.1.min.js"></script>
@@ -591,7 +743,22 @@ data-keyboard="false">
         }
         return i;
       }
+
     }
+    $(document).ready(function () {
+      if ($.fn.DataTable.isDataTable('#sampleTable')) {
+        $('#sampleTable').DataTable().destroy();
+      }
+
+      $('#sampleTable').DataTable({
+        columnDefs: [
+          {
+            targets: 6, // Chỉ số cột "Giá tiền"
+            className: 'text-right' // Căn phải giá trị trong cột bằng CSS
+          }
+        ]
+      });
+    });
   </script>
   <script>
     function deleteRow(r) {
@@ -607,7 +774,87 @@ data-keyboard="false">
         })
           .then((willDelete) => {
             if (willDelete) {
-              swal("Đã xóa thành công.!", {
+              swal("Đã xóa sản phẩm thành công!", {
+
+              });
+            }
+          });
+      });
+    });
+    oTable = $('#sampleTable').dataTable();
+    $('#all').click(function (e) {
+      $('#sampleTable tbody :checkbox').prop('checked', $(this).is(':checked'));
+      e.stopImmediatePropagation();
+    });
+
+    function functionFilter() {
+      var sortSelect = document.querySelector('.sort-select');
+      if (sortSelect.style.display === 'none') {
+        sortSelect.style.display = 'block';
+      } else {
+        sortSelect.style.display = 'none';
+      }
+    }
+
+    function sortByNameAscending(option) {
+      var sortSelect = document.querySelector('.sort-select');
+
+      var selectedText = option.innerText;
+      var button = document.querySelector('.btn-filter');
+      button.innerText = 'Lọc: ' + selectedText;
+      sortSelect.style.display = 'none';
+      var table = $('#sampleTable').DataTable();
+      table.order([[6, 'asc']]).draw();
+
+    }
+
+    function sortByNameDescending(option) {
+      var sortSelect = document.querySelector('.sort-select');
+
+      var selectedText = option.innerText;
+      var button = document.querySelector('.btn-filter');
+      button.innerText = 'Lọc: ' + selectedText;
+      sortSelect.style.display = 'none';
+      var table = $('#sampleTable').DataTable();
+      table.order([[6, 'desc']]).draw();
+
+    }
+    function sortByNameZA(option) {
+      var sortSelect = document.querySelector('.sort-select');
+
+      var selectedText = option.innerText;
+      var button = document.querySelector('.btn-filter');
+      button.innerText = 'Lọc: ' + selectedText;
+      sortSelect.style.display = 'none';
+      var table = $('#sampleTable').DataTable();
+      table.order([[2, 'desc']]).draw();
+
+    }
+    function sortByNameAZ(option) {
+      var sortSelect = document.querySelector('.sort-select');
+
+      var selectedText = option.innerText;
+      var button = document.querySelector('.btn-filter');
+      button.innerText = 'Lọc: ' + selectedText;
+      sortSelect.style.display = 'none';
+      var table = $('#sampleTable').DataTable();
+      table.order([[2, 'asc']]).draw();
+
+    }
+    function editRow(r) {
+      var i = r.parentNode.parentNode.rowIndex;
+      document.getElementById("myTable").editRow(i);
+    }
+    jQuery(function () {
+      jQuery(".editproduct").click(function () {
+        swal({
+          title: "Cảnh báo",
+          text: "Bạn có chắc chắn là muốn cập nhật thông tin sản phẩm này?",
+          buttons: ["Hủy bỏ", "Đồng ý"],
+        })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Đã cập nhật thành công!", {
 
               });
             }
