@@ -36,6 +36,7 @@
     </ul>
   </header>
   <!-- Sidebar menu-->
+  <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
   <aside class="app-sidebar" id="main-SideBar">
   </aside>
   <main class="app-content">
@@ -50,6 +51,38 @@
       <div class="col-md-12">
         <div class="tile">
           <div class="tile-body">
+            <div class="row element-button">
+              <div class="col-sm-2">
+
+                <a class="btn btn-add btn-sm" href="UpdateKPI.html" title="Thêm"><i class="fas fa-plus"></i>
+                  Cập nhật và đặt KPI</a>
+              </div>
+              <div class="col-sm-2">
+                <a class="btn btn-delete btn-sm nhap-tu-file" type="button" title="Nhập" onclick="myFunction(this)"><i
+                    class="fas fa-file-upload"></i> Tải từ file</a>
+              </div>
+
+              <div class="col-sm-2">
+                <a class="btn btn-delete btn-sm print-file" type="button" title="In" onclick="myApp.printTable()"><i
+                    class="fas fa-print"></i> In dữ liệu</a>
+              </div>
+              <div class="col-sm-2">
+                <a class="btn btn-delete btn-sm print-file js-textareacopybtn" type="button" title="Sao chép"><i
+                    class="fas fa-copy"></i> Sao chép</a>
+              </div>
+
+              <div class="col-sm-2">
+                <a class="btn btn-excel btn-sm" href="" title="In"><i class="fas fa-file-excel"></i> Xuất Excel</a>
+              </div>
+              <div class="col-sm-2">
+                <a class="btn btn-delete btn-sm pdf-file" type="button" title="In" onclick="myFunction(this)"><i
+                    class="fas fa-file-pdf"></i> Xuất PDF</a>
+              </div>
+              <div class="col-sm-2">
+                <a class="btn btn-delete btn-sm" type="button" title="Xóa" onclick="myFunction(this)"><i
+                    class="fas fa-trash-alt"></i> Xóa tất cả </a>
+              </div>
+            </div>
             <table class="table table-hover table-bordered js-copytextarea" cellpadding="0" cellspacing="0" border="0"
               id="sampleTable">
               <thead>
@@ -57,240 +90,74 @@
                   <th style="text-align: center;">ID nhân viên</th>
                   <th width="150" style="text-align: center;">Họ và tên</th>
                   <th width="20" style="text-align: center;">Ảnh thẻ</th>
-                  <th style="text-align: center;">Ngày sinh</th>
-                  <th style="text-align: center;">Giới tính</th>
-                  <th style="text-align: center;">SĐT</th>
+                  <th style="text-align: center;">Mô tả KPI</th>
                   <th style="text-align: center;">Chức vụ</th>
-                  <th width="100" style="text-align: center;">Điểm danh</th>
+                  <th width="100" style="text-align: center;">Tình trạng</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td style="text-align: center;">#CD12837</td>
                   <td>Hồ Thị Thanh Ngân</td>
-                  <td><img class="img-card-person" src="/img-anhthe/1.jpg" alt=""></td>
-                  <td style="text-align: center;">12/02/1999</td>
-                  <td style="text-align: center;">Nữ</td>
-                  <td style="text-align: center;">0926737168</td>
-                  <td style="text-align: center;">Bán hàng</td>
-                  <td style="text-align: center;"><button class="btn" type="button"
-                      style="background-color: cornsilk; width: 50px; height: 37px; text-align: center;"
-                      data-toggle="modal"><input type="checkbox" id="checkboxDiemDanh1"
-                        style="width: 20px; height: 20px; text-align: right;">
-                    </button>
-                  </td>
+                  <td><img class="img-card-person" src="/img-anhthe/2.jpg" alt=""></td>
+                  <td style="text-align: center;">Đi làm đủ 21 ngày/tháng</td>
+                  <td style="text-align: center;">Nhân viên kho</td>
+                  <td width="100" style="text-align: center; margin-top: 20px; "class="badge bg-success"> Đạt KPI</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">#SX22837</td>
                   <td>Trần Khả Ái</td>
                   <td><img class="img-card-person" src="/img-anhthe/2.jpg" alt=""></td>
-                  <td style="text-align: center;">22/12/1999</td>
-                  <td style="text-align: center;">Nữ</td>
-                  <td style="text-align: center;">0931342432</td>
-                  <td style="text-align: center;">Bán hàng</td>
-                  <td style="text-align: center;"><button class="btn" type="button"
-                      style="background-color: cornsilk; width: 50px; height: 37px; text-align: center;"
-                      data-toggle="modal"><input type="checkbox" id="checkboxDiemDanh2"
-                        style="width: 20px; height: 20px; text-align: right;">
-                    </button>
-                  </td>
+                  <td style="text-align: center;">Đi làm đủ 21 ngày/tháng</td>
+                  <td style="text-align: center;">Nhân viên kho</td>
+                  <td width="100" style="text-align: center; margin-top: 20px; "class="badge bg-info">Vượt KPI</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">#LO2871</td>
                   <td>Phạm Thu Cúc</td>
                   <td><img class="img-card-person" src="/img-anhthe/3.jpg" alt=""></td>
-                  <td style="text-align: center;">02/06/1998</td>
-                  <td style="text-align: center;">Nữ</td>
-                  <td style="text-align: center;">0931491997</td>
-                  <td style="text-align: center;">Thu ngân</td>
-                  <td style="text-align: center;"><button class="btn" type="button"
-                      style="background-color: cornsilk; width: 50px; height: 37px; text-align: center;"
-                      data-toggle="modal"><input type="checkbox" id="checkboxDiemDanh3"
-                        style="width: 20px; height: 20px; text-align: right;">
-                    </button>
-                  </td>
+                  <td style="text-align: center;">Đi làm đủ 21 ngày/tháng</td>
+                  <td style="text-align: center;">Nhân viên kho</td>
+                  <td width="100" style="text-align: center; margin-top: 20px; "class="badge bg-success">Đạt KPI</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">#SR28746</td>
                   <td>Trần Anh Khoa</td>
                   <td><img class="img-card-person" src="/img-anhthe/4.jpg" alt=""></td>
-                  <td style="text-align: center;">18/02/1995</td>
-                  <td style="text-align: center;">Nam</td>
-                  <td style="text-align: center;">0916706633</td>
-                  <td style="text-align: center;">Tư vấn</td>
-                  <td style="text-align: center;"><button class="btn" type="button"
-                      style="background-color: cornsilk; width: 50px; height: 37px; text-align: center;"
-                      data-toggle="modal"><input type="checkbox" id="checkboxDiemDanh4"
-                        style="width: 20px; height: 20px; text-align: right;">
-                    </button>
-                  </td>
+                  <td style="text-align: center;">Đi làm đủ 21 ngày/tháng</td>
+                  <td style="text-align: center;">Nhân viên kho</td>
+                  <td width="100" style="text-align: center; margin-top: 20px; "class="badge bg-info">Vượt KPI</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">#KJS276</td>
                   <td>Nguyễn Thành Nhân</td>
                   <td><img class="img-card-person" src="/img-anhthe/5.jpg" alt=""></td>
-                  <td style="text-align: center;">10/03/1996</td>
-                  <td style="text-align: center;">Nam</td>
-                  <td style="text-align: center;">0971038066</td>
-                  <td style="text-align: center;">Bảo trì</td>
-                  <td style="text-align: center;"><button class="btn" type="button"
-                      style="background-color: cornsilk; width: 50px; height: 37px; text-align: center;"
-                      data-toggle="modal"><input type="checkbox" id="checkboxDiemDanh5"
-                        style="width: 20px; height: 20px; text-align: right;">
-                    </button>
-                  </td>
+                  <td style="text-align: center;">Đi làm đủ 21 ngày/tháng</td>
+                  <td style="text-align: center;">Nhân viên kho</td>
+                  <td width="100" style="text-align: center; margin-top: 20px; "class="badge bg-success">Đạt KPI</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">#BS76228</td>
                   <td>Nguyễn Đặng Trọng Nhân</td>
                   <td><img class="img-card-person" src="/img-anhthe/6.jpg" alt=""></td>
-                  <td style="text-align: center;">23/07/1996</td>
-                  <td style="text-align: center;">Nam</td>
-                  <td style="text-align: center;">0846881155</td>
-                  <td style="text-align: center;">Dịch vụ</td>
-                  <td style="text-align: center;"><button class="btn" type="button"
-                      style="background-color: cornsilk; width: 50px; height: 37px; text-align: center;"
-                      data-toggle="modal"><input type="checkbox" id="checkboxDiemDanh6"
-                        style="width: 20px; height: 20px; text-align: right;">
-                    </button>
-                  </td>
+                  <td style="text-align: center;">Đi làm đủ 21 ngày/tháng</td>
+                  <td style="text-align: center;">Nhân viên kho</td>
+                  <td width="100" style="text-align: center; margin-top: 20px; "class="badge bg-success">Đạt KPI</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">#YUI21376</td>
                   <td>Nguyễn Thị Mai</td>
                   <td><img class="img-card-person" src="/img-anhthe/4.jpg" alt=""></td>
-                  <td style="text-align: center;">09/12/2000</td>
-                  <td style="text-align: center;">Nữ </td>
-                  <td style="text-align: center;">0836333037</td>
-                  <td style="text-align: center;">Tư vấn</td>
-                  <td style="text-align: center;"><button class="btn" type="button"
-                      style="background-color: cornsilk; width: 50px; height: 37px; text-align: center;"
-                      data-toggle="modal"><input type="checkbox" id="checkboxDiemDanh7"
-                        style="width: 20px; height: 20px; text-align: right;">
-                    </button>
-                  </td>
+                  <td style="text-align: center;">Đi làm đủ 21 ngày/tháng</td>
+                  <td style="text-align: center;">Nhân viên kho</td>
+                  <td width="100" style="text-align: center; margin-top: 20px; "class="badge bg-success">Đạt KPI</td>
                 </tr>
-
               </tbody>
             </table>
           </div>
         </div>
       </div>
     </div>
-    <script>
-      const checkbox1 = document.getElementById('checkboxDiemDanh1');
-      const checkbox2 = document.getElementById('checkboxDiemDanh2');
-      const checkbox3 = document.getElementById('checkboxDiemDanh3');
-      const checkbox4 = document.getElementById('checkboxDiemDanh4');
-      const checkbox5 = document.getElementById('checkboxDiemDanh5');
-      const checkbox6 = document.getElementById('checkboxDiemDanh6');
-      const checkbox7 = document.getElementById('checkboxDiemDanh7');
-      checkbox1.addEventListener('change', function () {
-        if (this.checked) {
-          swal({
-          title: "Thành công",
-          text: "Điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        } else {
-          swal({
-          title: "Hủy điểm danh",
-          text: "Hủy điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        }
-      });
-      checkbox2.addEventListener('change', function () {
-        if (this.checked) {
-          swal({
-          title: "Thành công",
-          text: "Điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        } else {
-          swal({
-          title: "Hủy điểm danh",
-          text: "Hủy điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        }
-      });
-      checkbox3.addEventListener('change', function () {
-        if (this.checked) {
-          swal({
-          title: "Thành công",
-          text: "Điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        } else {
-          swal({
-          title: "Hủy điểm danh",
-          text: "Hủy điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        }
-      });
-      checkbox4.addEventListener('change', function () {
-        if (this.checked) {
-          swal({
-          title: "Thành công",
-          text: "Điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        } else {
-          swal({
-          title: "Hủy điểm danh",
-          text: "Hủy điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        }
-      });
-      checkbox5.addEventListener('change', function () {
-        if (this.checked) {
-          swal({
-          title: "Thành công",
-          text: "Điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        } else {
-          swal({
-          title: "Hủy điểm danh",
-          text: "Hủy điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        }
-      });
-      checkbox6.addEventListener('change', function () {
-        if (this.checked) {
-          swal({
-          title: "Thành công",
-          text: "Điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        } else {
-          swal({
-          title: "Hủy điểm danh",
-          text: "Hủy điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        }
-      });
-      checkbox7.addEventListener('change', function () {
-        if (this.checked) {
-          swal({
-          title: "Thành công",
-          text: "Điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        } else {
-          swal({
-          title: "Hủy điểm danh",
-          text: "Hủy điểm danh thành công",
-          buttons: [, "Đồng ý"],
-        })
-        }
-      });
-    </script>
   </main>
 
   <!--
@@ -380,7 +247,7 @@
   <script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
   <script type="text/javascript">$('#sampleTable').DataTable();</script>
   <script src="/doc/js/plugins/sidebar.js"></script>
-    <script>renderSideBar("inventory");</script>
+    <script>renderSideBar("accounting");</script>
   <script>
     function deleteRow(r) {
       var i = r.parentNode.parentNode.rowIndex;
@@ -390,14 +257,14 @@
       jQuery(".trash").click(function () {
         swal({
           title: "Cảnh báo",
-
+         
           text: "Bạn có chắc chắn là muốn xóa nhân viên này?",
           buttons: ["Hủy bỏ", "Đồng ý"],
         })
           .then((willDelete) => {
             if (willDelete) {
               swal("Đã xóa thành công.!", {
-
+                
               });
             }
           });
