@@ -95,10 +95,9 @@ function renderSideBar(page){
               >
             </li>
             <li>
-              <a class="app-menu__item ${InventoryManagerment}" href="InventoryManagerment.html"
-                ><i class="app-menu__icon bx bx-cog"></i
-                ><span class="app-menu__label">Quản lý kiểm kê</span></a
-              >
+            <a class="app-menu__item ${InventoryManagerment}" href="InventoryManagerment.html"
+            ><i class="app-menu__icon fas fa-notes-medical"></i><span class="app-menu__label">Kiểm kê kho</span></a
+          >
             </li>
           </ul>
             `
@@ -135,10 +134,9 @@ function renderSideBar(page){
             <li><a class="app-menu__item" href="order_management.html"><i class='app-menu__icon bx bx-task'></i><span
                         class="app-menu__label">Quản lý đơn hàng</span></a></li>
            
-          <li><a class="app-menu__item ${InventoryManagerment}" href="InventoryManagerment.html"
-            ><i class="app-menu__icon bx bx-cog"></i
-            ><span class="app-menu__label">Quản lý kiểm kê</span></a
-          ></li>
+          <li>  <a class="app-menu__item ${InventoryManagerment}" href="InventoryManagerment.html"
+          ><i class="app-menu__icon fas fa-notes-medical"></i><span class="app-menu__label">Kiểm kê kho</span></a
+        ></li>
             <li><a class="app-menu__item" href="page-calendar.html"><i
                         class='app-menu__icon bx bx-calendar-check'></i><span class="app-menu__label">Lịch công tác
                     </span></a></li>
