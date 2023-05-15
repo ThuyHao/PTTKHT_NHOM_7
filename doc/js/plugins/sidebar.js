@@ -2,8 +2,11 @@ function renderSideBar(page){
     let loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
     let index = page=="index"?"active":"";
     let InventoryManagerment = page=="inventory"?"active":"";;
-   
-
+    let add_export = page=="add-export"?"active":"";
+    let search_export = page=="search-export"?"active":"";
+    let sidebar = page=="show-page"?"active":"";
+    let viewexport = page=="view-export"?"active":"";
+    let pay =page=="Order-pay"?"active":"";
     var sidebarDom;
     if (loggedUser) {
       switch (loggedUser.role) {
@@ -149,13 +152,46 @@ function renderSideBar(page){
                 </li>
         </ul>
             `
-          break;
-        case "shipper":
-       
-          break;
-        case "inventory":
+            break;
+            case "shipper":
+              sidebarDom=` <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="/images/hay.jpg" width="50px"
+              alt="User Image">
+            <div>
+              <p class="app-sidebar__user-name"><b>Locendou</b></p>
+              <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
+            </div>
+          </div>
+          <hr>
+          <ul class="app-menu">
+          
+              <li><a class="app-menu__item ${sidebar}" href="all-order-page.html"><i class='app-menu__icon bx bx-task'></i><span
+                    class="app-menu__label">Quản lý đơn hàng</span></a></li>
+            
+            </ul>`;
+              break;
+            case "inventory":
+              sidebarDom =`
+              <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="/images/hay.jpg" width="50px"
+            alt="User Image">
+          <div>
+            <p class="app-sidebar__user-name"><b>Locendou</b></p>
+            <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
+          </div>
+        </div>
+        <hr>
+        <ul class="app-menu">
+         
+          
+          <li><a class="app-menu__item ${add_export}" href="add-export-coupon.html"><i class="app-menu__icon bx bx-plus-circle"></i><span
+              class="app-menu__label" >Tạo phiếu xuất kho</span></a></li>
+              <li><a class="app-menu__item ${search_export}" href="explore-lookup-page.html"><i class='app-menu__icon bx bx-search'></i><span
+                class="app-menu__label">Tra cứu xuất kho
+              </span></a></li>
+              
         
-          break;
+        </ul>
+              `;
+              break;
         case "accounting":
             sidebarDom=`
             <div class="app-sidebar__user">
@@ -182,12 +218,12 @@ function renderSideBar(page){
           <span class="app-menu__label">Đặt KPI</span></a></li>
       <li><a class="app-menu__item" href="table-data-money.html"><i class='app-menu__icon bx bx-dollar'></i><span
             class="app-menu__label">Bảng kê lương</span></a></li>
-      <li><a class="app-menu__item" href="quan-ly-bao-cao.html"><i
+      <li><a class="app-menu__item ${pay}" href="all-order-pay.html"><i
             class='app-menu__icon bx bx-pie-chart-alt-2'></i><span class="app-menu__label">Báo cáo doanh thu</span></a>
       </li>
       <li><a class="app-menu__item" href="ImportCoupon.html"><i class='app-menu__icon bx bx-calendar-check'></i><span
             class="app-menu__label">Xem phiếu nhập kho </span></a></li>
-            <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-calendar-check'></i><span
+            <li><a class="app-menu__item  ${viewexport}" href="Export-Coupon-page.html"><i class='app-menu__icon bx bx-calendar-check'></i><span
             class="app-menu__label">Xem phiếu xuất kho </span></a></li>
             <li>
             <a class="app-menu__item" href="page-infomation-account.html"
