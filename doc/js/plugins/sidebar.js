@@ -7,6 +7,7 @@ function renderSideBar(page){
     let sidebar = page=="show-page"?"active":"";
     let viewexport = page=="view-export"?"active":"";
     let pay =page=="Order-pay"?"active":"";
+    let add_nhanvien = page =="add-nhanvien"?"active":"";
     var sidebarDom;
     if (loggedUser) {
       switch (loggedUser.role) {
@@ -40,7 +41,7 @@ function renderSideBar(page){
               >
             </li>
             <li>
-              <a class="app-menu__item" href="table-data-table.html"
+              <a class="app-menu__item" ${add_nhanvien} href="form-add-nhan-vien.html"
                 ><i class="app-menu__icon bx bx-id-card"></i>
                 <span class="app-menu__label">Quản lý nhân viên</span></a
               >
@@ -163,10 +164,9 @@ function renderSideBar(page){
           </div>
           <hr>
           <ul class="app-menu">
-          
-              <li><a class="app-menu__item ${sidebar}" href="all-order-page.html"><i class='app-menu__icon bx bx-task'></i><span
+          <li><a class="app-menu__item ${sidebar}" href="all-order-page.html"><i class='app-menu__icon bx bx-task'></i><span
                     class="app-menu__label">Quản lý đơn hàng</span></a></li>
-            
+
             </ul>`;
               break;
             case "inventory":
