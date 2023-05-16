@@ -124,7 +124,7 @@
                   <td>Nguyễn Thị Mỹ Yến</td>
                   <td>Bàn ăn mở rộng Gepa</td>
                   <td>1 </td>
-                  <td style="">16.770.000 đ</td>
+                  <td>16.770.000 đ</td>
                   <td><span class="badge bg-info">Chờ thanh toán</span></td>
                   <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i
                         class="fas fa-trash-alt"></i> </button>
@@ -390,7 +390,10 @@
   <script src="/doc/js/plugins/sidebar.js"></script>
   <script>renderSideBar("order");</script>
   <script type="text/javascript">$('#sampleTable').DataTable();</script>
+
   <script>
+
+
     function deleteRow(r) {
       var i = r.parentNode.parentNode.rowIndex;
       document.getElementById("myTable").deleteRow(i);
