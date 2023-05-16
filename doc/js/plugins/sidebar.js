@@ -31,12 +31,7 @@ function renderSideBar(page){
           </div>
           <hr />
           <ul class="app-menu">
-            <li>
-              <a class="app-menu__item haha" href="phan-mem-ban-hang.html"
-                ><i class="app-menu__icon bx bx-cart-alt"></i>
-                <span class="app-menu__label">POS Bán Hàng</span></a
-              >
-            </li>
+
             <li>
               <a class="app-menu__item ${index}" href="index.html"
                 ><i class="app-menu__icon bx bx-tachometer"></i
