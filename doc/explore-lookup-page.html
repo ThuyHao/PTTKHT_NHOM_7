@@ -104,11 +104,7 @@
           <div class="tile">
             <div class="tile-body">
               <div class="row element-button">
-                <div class="col-sm-2">
-  
-                  <a class="btn btn-add btn-sm" href="form-add-don-hang.html" title="Thêm"><i class="fas fa-plus"></i>
-                    Tạo mới đơn hàng</a>
-                </div>
+                
                 <div class="col-sm-2">
                   <a class="btn btn-delete btn-sm nhap-tu-file" type="button" title="Nhập" onclick="myFunction(this)"><i
                       class="fas fa-file-upload"></i> Tải từ file</a>
@@ -296,7 +292,7 @@
      
     showerror.innerHTML =`
     <p>Không tìm thấy mã đơn hàng</p>
-    <button id="AcceptButton" onclick="Add()">Xác nhận </button>`;
+    <button id="AcceptButton" class="btn btn-save" onclick="Add()">Xác nhận </button>`;
     showerror.style.display="block";
   } else if (listid.includes(id)) {
     showerror.innerHTML = `
@@ -309,7 +305,7 @@
     <p>Địa điểm đến:Hà nội </p>
     <p>Người lập phiếu:loc </p>
     <p>Ghi chú:</p>
-    <button id="AcceptButton" onclick="Add()">Xác nhận </button>
+    <button id="AcceptButton" class="btn btn-save" onclick="Add()">Xác nhận </button>
     `;
     showerror.style.display = "block";
 }
