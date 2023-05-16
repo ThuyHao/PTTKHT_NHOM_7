@@ -7,7 +7,9 @@ function renderSideBar(page){
     let sidebar = page=="show-page"?"active":"";
     let viewexport = page=="view-export"?"active":"";
     let pay =page=="Order-pay"?"active":"";
+    let accounting =page=="accounting"?"active":"";
     let add_nhanvien = page =="add-nhanvien"?"active":"";
+    let deleteFixNView_nhanvien = page == "deleteFixNView-nhanvien"?"active":"";
     var sidebarDom;
     if (loggedUser) {
       switch (loggedUser.role) {
@@ -42,6 +44,12 @@ function renderSideBar(page){
             </li>
             <li>
               <a class="app-menu__item" ${add_nhanvien} href="form-add-nhan-vien.html"
+                ><i class="app-menu__icon bx bx-id-card"></i>
+                <span class="app-menu__label">Quản lý nhân viên</span></a
+              >
+            </li>
+            <li>
+              <a class="app-menu__item" ${deleteFixNView_nhanvien} href="table-data-table.html"
                 ><i class="app-menu__icon bx bx-id-card"></i>
                 <span class="app-menu__label">Quản lý nhân viên</span></a
               >
@@ -219,7 +227,7 @@ function renderSideBar(page){
       <li><a class="app-menu__item ${pay}" href="all-order-pay.html"><i
             class='app-menu__icon bx bx-pie-chart-alt-2'></i><span class="app-menu__label">Báo cáo doanh thu</span></a>
       </li>
-      <li><a class="app-menu__item" href="ImportCoupon.html"><i class='app-menu__icon bx bx-calendar-check'></i><span
+      <li><a class="app-menu__item ${accounting}" href="ImportCoupon.html"><i class='app-menu__icon bx bx-calendar-check'></i><span
             class="app-menu__label">Xem phiếu nhập kho </span></a></li>
             <li><a class="app-menu__item  ${viewexport}" href="Export-Coupon-page.html"><i class='app-menu__icon bx bx-calendar-check'></i><span
             class="app-menu__label">Xem phiếu xuất kho </span></a></li>
