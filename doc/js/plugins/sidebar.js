@@ -44,12 +44,6 @@ function renderSideBar(page){
               >
             </li>
             <li>
-              <a class="app-menu__item" ${add_nhanvien} href="form-add-nhan-vien.html"
-                ><i class="app-menu__icon bx bx-id-card"></i>
-                <span class="app-menu__label">Quản lý nhân viên</span></a
-              >
-            </li>
-            <li>
               <a class="app-menu__item" ${deleteFixNView_nhanvien} href="table-data-table.html"
                 ><i class="app-menu__icon bx bx-id-card"></i>
                 <span class="app-menu__label">Quản lý nhân viên</span></a
