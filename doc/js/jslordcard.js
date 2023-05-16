@@ -5,7 +5,7 @@ function createInstance() {
       statusId:1,
       checkBy: "Lê Minh Long",
       status: "Đã xác nhận",
-      description: "Kiểm tra càng sớm càng tốt",
+      description: "Số lượng đủ",
       createAt: "01/02/2019",
       checkAt: "03/02/2019",
       listProduct: [{
@@ -23,7 +23,7 @@ function createInstance() {
       checkBy: "Huỳng Công Đạt",
       statusId:0,
       status: "Chưa xác nhận",
-      description: "Mai kiểm tra gấp",
+      description: "",
       createAt: "13/05/2023",
       checkAt: "",
       listProduct: [
@@ -44,7 +44,7 @@ function createInstance() {
       checkBy: "Mai Hữu Lộc",
       statusId:1,
       status: "Đã xác nhận",
-      description: "Hoàn thành trong tuần",
+      description: "Đầy đủ",
       createAt: "03/09/2020",
       checkAt: "07/09/2020",
       listProduct: [{
@@ -62,7 +62,7 @@ function createInstance() {
       checkBy: "Lê Minh Long",
       statusId:1,
       status: "Đã xác nhận",
-      description: "Kiểm tra càng sớm càng tốt",
+      description: "thiếu 1 ghế zuno và 3 bàn ăn vitali",
       createAt: "04/05/2019",
       checkAt: "06/05/2019",
       listProduct: [{
@@ -85,7 +85,7 @@ function createInstance() {
       checkBy: "Lê Minh Long",
       statusId:0,
       status: "Chưa xác nhận",
-      description: "Kiểm tra càng sớm càng tốt",
+      description: "",
       createAt: "01/02/2019",
       checkAt: "03/02/2019",
       listProduct: [{
@@ -113,7 +113,7 @@ function createInstance() {
       checkBy: "Mai Hữu Lộc",
       statusId:0,
       status: "Chưa xác nhận",
-      description: "Hoàn thành trong tuần",
+      description: "",
       createAt: "01/02/2021",
       checkAt: "03/02/2021",
       listProduct: [{
@@ -135,7 +135,7 @@ function createInstance() {
       checkBy: "Lê Minh Long",
       statusId:1,
       status: "Đã xác nhận",
-      description: "Kiểm tra càng sớm càng tốt",
+      description: "Đủ số lượng",
       createAt: "06/02/2019",
       checkAt: "09/02/2019",
       listProduct: [{
@@ -154,7 +154,7 @@ function createInstance() {
       checkBy: "Lê Minh Long",
       statusId:1,
       status: "Đã xác nhận",
-      description: "Kiểm tra càng sớm càng tốt",
+      description: "Đủ",
       createAt: "10/02/2019",
       checkAt: "15/02/2019",
       listProduct: [{
@@ -172,7 +172,7 @@ function createInstance() {
       checkBy: "Lê Minh Long",
       statusId:1,
       status: "Đã xác nhận",
-      description: "Kiểm tra càng sớm càng tốt",
+      description: "Đủ",
       createAt: "15/02/2019",
       checkAt: "17/02/2019",
       listProduct: [{
@@ -195,7 +195,7 @@ function createInstance() {
       checkBy: "Lê Minh Long",
       statusId:1,
       status: "Đã xác nhận",
-      description: "Kiểm tra càng sớm càng tốt",
+      description: "Đầy đủ",
       createAt: "16/02/2019",
       checkAt: "18/02/2019",
       listProduct: [{
@@ -214,7 +214,7 @@ function createInstance() {
       checkBy: "Lê Minh Long",
       statusId:1,
       status: "Đã xác nhận",
-      description: "Kiểm tra càng sớm càng tốt",
+      description: "Đủ",
       createAt: "18/02/2019",
       checkAt: "20/02/2019",
       listProduct: [{
