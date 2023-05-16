@@ -18,6 +18,8 @@
   <link rel="stylesheet" type="text/css"
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
+
   <script src="http://code.jquery.com/jquery.min.js" type="text/javascript"></script>
   <script>
 
@@ -247,7 +249,7 @@
               </div>
 
           </div>
-          <button class="btn btn-save" type="button">Lưu lại</button>
+          <button class="btn btn-save" type="button" onclick="show()">Lưu lại</button>
           <a class="btn btn-cancel" href="table-data-product.html">Hủy bỏ</a>
         </div>
   </main>
@@ -375,14 +377,14 @@ MODAL
 -->
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.all.min.js"></script>
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/plugins/pace.min.js"></script>
   <script src="/doc/js/plugins/sidebar.js"></script>
-    <script>renderSideBar("inventory");</script>
+    <script>renderSideBar("asset");</script>
   <script>
     const inpFile = document.getElementById("inpFile");
     const loadFile = document.getElementById("loadFile");
@@ -403,6 +405,11 @@ MODAL
       }
     });
 
+  </script>
+  <script>
+    function show() {
+      Swal.fire('Thêm tài sản thành công')
+    }
   </script>
 </body>
 

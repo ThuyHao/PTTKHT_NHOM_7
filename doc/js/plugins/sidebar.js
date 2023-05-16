@@ -18,6 +18,11 @@ function renderSideBar(page){
     let calender =page=="calender"?"active":"";
     let productmanager =page=="product-manager"?"active":"";
     let assetmanager = page=="asset"?"active":"";
+    let addImportCoupon = page == "addImportCoupon"?"active":"";
+    let ImportCouponPage = page == "ImportCouponPage"?"active":"";
+
+    let PrintImportCoupon = page == "PrintImportCoupon"?"active":"";
+    let PrintExportCoupon = page == "PrintExportCoupon"?"active":"";
     var sidebarDom;
     if (loggedUser) {
       switch (loggedUser.role) {
@@ -140,8 +145,17 @@ function renderSideBar(page){
               <li><a class="app-menu__item ${search_export}" href="explore-lookup-page.html"><i class='app-menu__icon bx bx-search'></i><span
                 class="app-menu__label">Tra cứu xuất kho
               </span></a></li>
-              
-        
+               <li><a class="app-menu__item ${addImportCoupon}" href="AddImportCouponPage.html"><i class="app-menu__icon bx bx-plus-circle"></i><span
+              class="app-menu__label" >Tạo phiếu nhập kho</span></a></li>
+         <li><a class="app-menu__item ${ImportCouponPage}" href="ImportCouponPage.html"><i class='app-menu__icon bx bx-search'></i><span
+                class="app-menu__label">Tra cứu nhập kho
+              </span></a></li>
+               <li><a class="app-menu__item ${PrintExportCoupon}" href="PrintExportPage.html"> <i class="fas fa-print"> </i><span
+                class="app-menu__label">&nbsp;&nbsp;&nbsp;  In phiếu xuất kho
+              </span></a></li>
+              <li><a class="app-menu__item ${PrintImportCoupon}" href="PrintImportPage.html"> <i class="fas fa-print"> </i><span
+                class="app-menu__label">&nbsp;&nbsp;&nbsp;  In phiếu nhập kho
+              </span></a></li>
         </ul>
               `;
               break;
