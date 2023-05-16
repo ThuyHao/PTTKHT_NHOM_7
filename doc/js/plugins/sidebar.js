@@ -2,6 +2,7 @@ function renderSideBar(page){
     let loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
     let index = page=="index"?"active":"";
     let InventoryManagerment = page=="inventory"?"active":"";;
+    let OrderManagerment = page=="order"?"active":"";;
     let add_export = page=="add-export"?"active":"";
     let search_export = page=="search-export"?"active":"";
     let sidebar = page=="show-page"?"active":"";
@@ -67,7 +68,7 @@ function renderSideBar(page){
               >
             </li>
             <li>
-              <a class="app-menu__item" href="order_management.html"
+              <a class="app-menu__item ${OrderManagerment}" href="order_management.html"
                 ><i class="app-menu__icon bx bx-task"></i
                 ><span class="app-menu__label">Quản lý đơn hàng</span></a
               >
