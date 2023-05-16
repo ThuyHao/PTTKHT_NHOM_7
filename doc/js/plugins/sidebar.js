@@ -1,7 +1,7 @@
 function renderSideBar(page){
     let loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
     let index = page=="index"?"active":"";
-    let InventoryManagerment = page=="inventory"?"active":"";;
+    let InventoryManagerment = page=="inventory"?"active":"";
     let OrderManagerment = page=="order"?"active":"";;
     let add_export = page=="add-export"?"active":"";
     let search_export = page=="search-export"?"active":"";
@@ -131,8 +131,7 @@ function renderSideBar(page){
             <li><a class="app-menu__item haha" href="phan-mem-ban-hang.html"><i
                         class='app-menu__icon bx bx-cart-alt'></i>
                     <span class="app-menu__label">POS Bán Hàng</span></a></li>
-            <li><a class="app-menu__item " href="index.html"><i class='app-menu__icon bx bx-tachometer'></i><span
-                        class="app-menu__label">Bảng điều khiển</span></a></li>
+     
             
             <li><a class="app-menu__item " href="Product_Management.html"><i
                         class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý sản
@@ -173,12 +172,14 @@ function renderSideBar(page){
           </div>
           <hr>
           <ul class="app-menu">
+                 <li><a class="app-menu__item " href="index.html"><i class='app-menu__icon bx bx-tachometer'></i><span
+                        class="app-menu__label">Bảng điều khiển</span></a></li>
           <li><a class="app-menu__item ${sidebar}" href="all-order-page.html"><i class='app-menu__icon bx bx-task'></i><span
                     class="app-menu__label">Quản lý đơn hàng</span></a></li>
 
             </ul>`;
               break;
-            case "inventory":
+            case "inventor":      
               sidebarDom =`
               <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="/images/hay.jpg" width="50px"
             alt="User Image">
