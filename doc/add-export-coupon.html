@@ -155,14 +155,7 @@
                     <label class="control-label">Số lượng</label>
                     <input class="form-control" type="number" id="soLuong" required>
                   </div>
-                  <div class="form-group  col-md-4">
-                    <label class="control-label">Đơn vị</label>
-                    <input class="form-control" type="text" id="donVi"required>
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label class="control-label">Địa điểm </label>
-                    <input class="form-control" type="text" id="diaDiemDen">
-                  </div>
+                 
                   <div class="form-group  col-md-3">
                     <label class="control-label">Người lập phiếu</label>
                     <input class="form-control" type="text" id="nguoiLapPhieu" required>
@@ -320,8 +313,7 @@
     var ngayXuatKho = document.getElementById("ngayXuatKho").value;
     var sanPham = document.getElementById("sanPham").value;
     var soLuong = document.getElementById("soLuong").value;
-    var donVi = document.getElementById("donVi").value;
-    var diaDiemDen = document.getElementById("diaDiemDen").value;
+  
     var nguoiLapPhieu = document.getElementById("nguoiLapPhieu").value;
     var ghiChu = document.getElementById("ghiChu").value;
     var formInfo = document.getElementById("showinfor");
@@ -330,33 +322,18 @@
         ngayXuatKho === "" ||
         sanPham === "" ||
         soLuong === "" ||
-        donVi === "" ||
-        diaDiemDen === "" ||
+     
         nguoiLapPhieu === ""
       ) {
         formInfo.innerHTML = `
         <p class='error-message'>Vui lòng nhập đầy đủ thông tin!</p>
-        <button id="cancelButton" onclick="cancel()">Đồng ý</button>`;
+        <button class="btn btn-save"  id="cancelButton" onclick="cancel()">Đồng ý</button>`;
         formInfo.style.display = "block";
       }else{
+        alert("Thêm thành công!");
       
-    formInfo.style.display = "block";
-    formInfo.innerHTML = `
-    
-      <h2>Tạo phiếu xuất kho:</h2>
-      <p>Mã phiếu: ${maPhieu}</p>
-      <p>Ngày xuất kho: ${ngayXuatKho}</p>
-      <p>Sản phẩm: ${sanPham}</p>
-      <p>Số lượng: ${soLuong}</p>
-      <p>Đơn vị: ${donVi}</p>
-      <p>Địa điểm đến: ${diaDiemDen}</p>
-      <p>Người lập phiếu: ${nguoiLapPhieu}</p>
-      <p>Ghi chú: ${ghiChu}</p>
-      <button id="AcceptButton" onclick="Add()">Xác nhận </button>
-      <button id="cancelButton" onclick="cancel()">Hủy</button>
-    `;
-     }
-   
+     
+      }
   }
   
   document.getElementById("cancelButton").addEventListener("click", cancel);
