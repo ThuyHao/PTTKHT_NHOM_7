@@ -31,19 +31,76 @@ function renderSideBar(page){
           </div>
           <hr />
           <ul class="app-menu">
-
+            <li>
+              <a class="app-menu__item haha" href="phan-mem-ban-hang.html"
+                ><i class="app-menu__icon bx bx-cart-alt"></i>
+                <span class="app-menu__label">POS Bán Hàng</span></a
+              >
+            </li>
             <li>
               <a class="app-menu__item ${index}" href="index.html"
                 ><i class="app-menu__icon bx bx-tachometer"></i
                 ><span class="app-menu__label">Bảng điều khiển</span></a
               >
             </li>
-      
             <li>
-              <a class="app-menu__item ${deleteFixNView_nhanvien}"  href="table-data-table.html"
+              <a class="app-menu__item" ${deleteFixNView_nhanvien} href="table-data-table.html"
                 ><i class="app-menu__icon bx bx-id-card"></i>
                 <span class="app-menu__label">Quản lý nhân viên</span></a
               >
+            </li>
+            <li>
+              <a class="app-menu__item" href="#"
+                ><i class="app-menu__icon bx bx-user-voice"></i
+                ><span class="app-menu__label">Quản lý khách hàng</span></a
+              >
+            </li>
+            <li>
+              <a class="app-menu__item" href="Product_Management.html"
+                ><i class="app-menu__icon bx bx-purchase-tag-alt"></i
+                ><span class="app-menu__label">Quản lý sản phẩm</span></a
+              >
+            </li>
+            <li>
+              <a class="app-menu__item ${OrderManagerment}" href="order_management.html"
+                ><i class="app-menu__icon bx bx-task"></i
+                ><span class="app-menu__label">Quản lý đơn hàng</span></a
+              >
+            </li>
+            <li>
+              <a class="app-menu__item" href="table-data-banned.html"
+                ><i class="app-menu__icon bx bx-run"></i
+                ><span class="app-menu__label">Quản lý nội bộ </span></a
+              >
+            </li>
+            <li>
+              <a class="app-menu__item" href="table-data-money.html"
+                ><i class="app-menu__icon bx bx-dollar"></i
+                ><span class="app-menu__label">Bảng kê lương</span></a
+              >
+            </li>
+            <li>
+              <a class="app-menu__item" href="quan-ly-bao-cao.html"
+                ><i class="app-menu__icon bx bx-pie-chart-alt-2"></i
+                ><span class="app-menu__label">Báo cáo doanh thu</span></a
+              >
+            </li>
+            <li>
+              <a class="app-menu__item" href="page-calendar.html"
+                ><i class="app-menu__icon bx bx-calendar-check"></i
+                ><span class="app-menu__label">Lịch công tác </span></a
+              >
+            </li>
+            <li>
+              <a class="app-menu__item" href="page-infomation-account.html"
+                ><i class="app-menu__icon bx bx-cog"></i
+                ><span class="app-menu__label">Quản lý hệ thống</span></a
+              >
+            </li>
+            <li>
+            <a class="app-menu__item ${InventoryManagerment}" href="InventoryManagerment.html"
+            ><i class="app-menu__icon fas fa-notes-medical"></i><span class="app-menu__label">Kiểm kê kho</span></a
+          >
             </li>
           </ul>
             `
@@ -79,10 +136,9 @@ function renderSideBar(page){
             <li><a class="app-menu__item" href="order_management.html"><i class='app-menu__icon bx bx-task'></i><span
                         class="app-menu__label">Quản lý đơn hàng</span></a></li>
            
-          <li><a class="app-menu__item ${InventoryManagerment}" href="InventoryManagerment.html"
-            ><i class="app-menu__icon bx bx-cog"></i
-            ><span class="app-menu__label">Quản lý kiểm kê</span></a
-          ></li>
+          <li>  <a class="app-menu__item ${InventoryManagerment}" href="InventoryManagerment.html"
+          ><i class="app-menu__icon fas fa-notes-medical"></i><span class="app-menu__label">Kiểm kê kho</span></a
+        ></li>
             <li><a class="app-menu__item" href="page-calendar.html"><i
                         class='app-menu__icon bx bx-calendar-check'></i><span class="app-menu__label">Lịch công tác
                     </span></a></li>
