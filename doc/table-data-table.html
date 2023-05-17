@@ -38,22 +38,8 @@
   </header>
   <!-- Sidebar menu-->
   <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-  <aside class="app-sidebar">
-    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="/images/hay.jpg" width="50px"
-        alt="User Image">
-      <div>
-        <p class="app-sidebar__user-name"><b>Nhật Minh</b></p>
-        <p class="app-sidebar__user-designation">Quản trị viên</p>
-      </div>
-    </div>
-    <hr>
-    <ul class="app-menu">
-      
-      <li><a class="app-menu__item " href="index.html"><i class='app-menu__icon bx bx-tachometer'></i><span
-            class="app-menu__label">Bảng điều khiển</span></a></li>
-      <li><a class="app-menu__item active" href="table-data-table.html"><i class='app-menu__icon bx bx-id-card'></i>
-          <span class="app-menu__label">Quản lý nhân viên</span></a></li>
-    </ul>
+  <aside class="app-sidebar" id="main-SideBar">
+   
   </aside>
   <main class="app-content">
     <div class="app-title">
@@ -127,7 +113,7 @@
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i>
                     </button>
-                    <button class="btn btn-primary btn-sm fa-info" type="button" title="Xem"
+                    <button class="btn btn-primary btn-sm info" type="button" title="Xem"
                       onclick="myFunction(this)" data-target="#ModalUP1" data-toggle="modal" ><i class="fas fa-info"></i>
                       </button>
                   </td>
@@ -145,7 +131,7 @@
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i>
                     </button>
-                    <button class="btn btn-primary btn-sm fa-info" type="button" title="Xem"
+                    <button class="btn btn-primary btn-sm info" type="button" title="Xem"
                       onclick="myFunction(this)" data-target="#ModalUP2" data-toggle="modal" ><i class="fas fa-info"></i>
                       </button>
                   </td>
@@ -163,7 +149,7 @@
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i>
                     </button>
-                    <button class="btn btn-primary btn-sm fa-info" type="button" title="Xem"
+                    <button class="btn btn-primary btn-sm info" type="button" title="Xem"
                       onclick="myFunction(this)" data-target="#ModalUP3" data-toggle="modal" ><i class="fas fa-info"></i>
                       </button>
                   </td>
@@ -181,7 +167,7 @@
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i>
                     </button>
-                    <button class="btn btn-primary btn-sm fa-info" type="button" title="Xem"
+                    <button class="btn btn-primary btn-sm info" type="button" title="Xem"
                       onclick="myFunction(this)" data-target="#ModalUP4" data-toggle="modal" ><i class="fas fa-info"></i>
                       </button>
                   </td>
@@ -199,7 +185,7 @@
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i>
                     </button>
-                    <button class="btn btn-primary btn-sm fa-info" type="button" title="Xem"
+                    <button class="btn btn-primary btn-sm info" type="button" title="Xem"
                       onclick="myFunction(this)" data-target="#ModalUP5" data-toggle="modal" ><i class="fas fa-info"></i>
                       </button>
                   </td>
@@ -217,7 +203,7 @@
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i>
                     </button>
-                    <button class="btn btn-primary btn-sm fa-info" type="button" title="Xem"
+                    <button class="btn btn-primary btn-sm info" type="button" title="Xem"
                       onclick="myFunction(this)" data-target="#ModalUP6" data-toggle="modal" ><i class="fas fa-info"></i>
                       </button>
                   </td>
@@ -235,7 +221,7 @@
                     <button class="btn btn-primary btn-sm edit" title="Sửa" id="show-emp" data-toggle="modal"
                       data-target="#ModalUP"><i class="fas fa-edit"></i>
                     </button>
-                    <button class="btn btn-primary btn-sm fa-info" type="button" title="Xem"
+                    <button class="btn btn-primary btn-sm info" type="button" title="Xem"
                       onclick="myFunction(this)" data-target="#ModalUP7" data-toggle="modal" ><i class="fas fa-info"></i>
                       </button>
                   </td>
@@ -254,14 +240,14 @@
 -->
   <div class="modal fade" id="ModalUP" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static"
     data-keyboard="false">
+    <form action="">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-
         <div class="modal-body">
           <div class="row">
             <div class="form-group  col-md-12">
               <span class="thong-tin-thanh-toan">
-                <h5>Chỉnh sửa thông tin nhân viên</h5>
+                <h5>Chỉnh sửa tài khoản nhân viên</h5>
               </span>
             </div>
           </div>
@@ -297,6 +283,14 @@
                 <option>Tạp vụ</option>
               </select>
             </div>
+            <div class="form-group  col-md-4">
+              <label class="control-label">Tài khoản</label>
+              <input class="form-control" type="number" id="sdt" required>
+            </div>
+            <div class="form-group  col-md-4">
+              <label class="control-label">Mật khẩu</label>
+              <input class="form-control" type="number" id="sdt" required>
+            </div>
           </div>
           <button class="btn btn-save" type="submit" onclick="printFormInfo()" data-target="#ModalUP">Lưu lại</button>
           <a class="btn btn-cancel" href="/doc/table-data-table.html">Hủy bỏ</a>
@@ -305,6 +299,7 @@
         </div>
       </div>
     </div>
+  </form>
     
     <div class="modal fade" id="ModalUP1" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static"
     data-keyboard="false">
@@ -315,7 +310,7 @@
           <div class="row">
             <div class="form-group  col-md-12">
               <span class="thong-tin-thanh-toan">
-                <h5>Thông tin nhân viên </h5>
+                <h5>Tài khoản nhân viên</h5>
               </span>
             </div>
           </div>
@@ -340,9 +335,17 @@
             <label class="control-label">Chức vụ</label>
           <input class="form-control" type="text" readonly value="Bán hàng">
         </div>
+        <div class="form-group  col-md-4">
+          <label class="control-label">Tài khoản</label>
+          <input class="form-control" type="number" id="sdt" required>
+        </div>
+        <div class="form-group  col-md-4">
+          <label class="control-label">Mật khẩu</label>
+          <input class="form-control" type="number" id="sdt" required>
+        </div>
           </div>
           <BR>
-            <a class="btn btn-cancel" data-dismiss="modal" href="#">Xong</a>
+            <a class="btn btn-save" data-dismiss="modal" href="#">Xong</a>
           <BR>
         </div>
         <div class="modal-footer">
@@ -495,7 +498,7 @@
           <div class="row">
             <div class="form-group  col-md-12">
               <span class="thong-tin-thanh-toan">
-                <h5>Thông tin nhân viên </h5>
+                <h5>Tài khoản nhân viên </h5>
               </span>
             </div>
           </div>
@@ -633,7 +636,7 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="src/jquery.table2excel.js"></script>
+  <!-- <script src="src/jquery.table2excel.js"></script> -->
   <script src="js/main.js"></script>
   <!-- The javascript plugin to display page loading on top-->
   <script src="js/plugins/pace.min.js"></script>
@@ -646,8 +649,9 @@
   <script type="text/javascript">$('#sampleTable').DataTable();</script>
   <script src="js/jslordcard.js" ></script>
   <script src="/doc/js/plugins/sidebar.js"></script>
+  <script type="text/javascript"> renderSideBar("listnhanvien");</script>
   <script>
-           renderSideBar("deleteFixNView-nhanvien");
+   
     function deleteRow(r) {
       var i = r.parentNode.parentNode.rowIndex;
       document.getElementById("myTable").deleteRow(i);
@@ -775,9 +779,7 @@
         sdt === "" ||
         chucvu === ""
       ) {
-        formInfo.innerHTML = `
-        <p class='error-message'>Vui lòng nhập đúng thông tin!</p>
-        <button id="exitButton" onclick="exit()">Thoát</button>`;
+       
         formInfo.style.display = "block";
       }else{
       
@@ -796,7 +798,7 @@
    
   }
   
-  document.getElementById("exitButton").addEventListener("click", exit);
+ 
 
 function exit() {
   var formInfo = document.getElementById("showinfor");

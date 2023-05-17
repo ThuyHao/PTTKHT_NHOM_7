@@ -158,22 +158,8 @@
   </header>
   <!-- Sidebar menu-->
   <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-  <aside class="app-sidebar">
-    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="/images/hay.jpg" width="50px"
-        alt="User Image">
-      <div>
-        <p class="app-sidebar__user-name"><b>Nhật Minh</b></p>
-        <p class="app-sidebar__user-designation">Quản trị viên</p>
-      </div>
-    </div>
-    <hr>
-    <ul class="app-menu">
-      
-      <li><a class="app-menu__item " href="index.html"><i class='app-menu__icon bx bx-tachometer'></i><span
-            class="app-menu__label">Bảng điều khiển</span></a></li>
-      <li><a class="app-menu__item active" href="table-data-table.html"><i class='app-menu__icon bx bx-id-card'></i>
-          <span class="app-menu__label">Quản lý nhân viên</span></a></li>
-    </ul>
+  <aside class="app-sidebar" id="main-SideBar">
+   
   </aside>
   <main class="app-content">
     <div class="app-title">
@@ -211,6 +197,14 @@
               </div>
               <div class="form-group  col-md-4">
                 <label class="control-label">Số điện thoại</label>
+                <input class="form-control" type="number" id="sdt" required>
+              </div>
+              <div class="form-group  col-md-4">
+                <label class="control-label">Tài khoản</label>
+                <input class="form-control" type="number" id="sdt" required>
+              </div>
+              <div class="form-group  col-md-4">
+                <label class="control-label">Mật khẩu</label>
                 <input class="form-control" type="number" id="sdt" required>
               </div>
               <div class="form-group  col-md-4">
@@ -284,7 +278,6 @@
   <script src="/doc/js/plugins/sidebar.js"></script>
   <script>
        renderSideBar("add-nhanvien");
-
     //Thời Gian
     function time() {
       var today = new Date();

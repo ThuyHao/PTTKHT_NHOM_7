@@ -10,6 +10,7 @@ function renderSideBar(page){
     let pay =page=="Order-pay"?"active":"";
     let accounting =page=="accounting"?"active":"";
     let add_nhanvien = page =="add-nhanvien"?"active":"";
+    let listnhanvien = page =="listnhanvien"?"active":"";
     let deleteFixNView_nhanvien = page == "deleteFixNView-nhanvien"?"active":"";
     let editacc = page =="editaccount"?"active":"";
     let importcou = page=="import"?"active":"";
@@ -43,21 +44,62 @@ function renderSideBar(page){
           </div>
           <hr />
           <ul class="app-menu">
-           
-            <li>
-              <a class="app-menu__item ${index}" href="index.html"
-                ><i class="app-menu__icon bx bx-tachometer"></i
-                ><span class="app-menu__label">Bảng điều khiển</span></a
-              >
+          <li><a class="app-menu__item haha" href="phan-mem-ban-hang.html"><i
+          class='app-menu__icon bx bx-cart-alt'></i>
+      <span class="app-menu__label">POS Bán Hàng</span></a></li>
+        <li>
+            <a class="app-menu__item ${index}" href="index.html"><i class="app-menu__icon bx bx-tachometer"></i><span
+                    class="app-menu__label">Bảng điều khiển</span></a>
+        </li>
+        <li>
+            <a class="app-menu__item ${listnhanvien}" href="table-data-table.html"><i
+                    class="app-menu__icon bx bx-id-card"></i>
+                <span class="app-menu__label">Quản lý nhân viên</span></a>
+        </li>
+        <li><a class="app-menu__item ${productmanager}" href="Product_Management.html"><i
+                    class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý sản
+                    phẩm</span></a>
+        </li>
+        <li><a class="app-menu__item ${assetmanager}" href="AssetManagerPage.html"><i
+                    class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý tài
+                    sản</span></a>
+        </li>
+        <li><a class="app-menu__item ${OrderManagerment}" href="order_management.html"><i
+                    class='app-menu__icon bx bx-task'></i><span class="app-menu__label">Quản lý đơn hàng</span></a></li>
+
+        <li> <a class="app-menu__item ${InventoryManagerment}" href="InventoryManagerment.html"><i
+                    class="app-menu__icon fas fa-notes-medical"></i><span class="app-menu__label">Kiểm kê kho</span></a>
+        </li>
+        <li><a class="app-menu__item ${calender}" href="page-calendar.html"><i
+                    class='app-menu__icon bx bx-calendar-check'></i><span class="app-menu__label">Lịch công tác
+                </span></a></li>
+        <li><a class="app-menu__item ${attendance}" href="diemdanh.html"><i
+                    class='app-menu__icon bx bx-calendar-check'></i><span class="app-menu__label">Điểm danh
+                </span></a></li>
+       
+        <li><a class="app-menu__item ${add_export}" href="add-export-coupon.html"><i
+                    class="app-menu__icon bx bx-plus-circle"></i><span class="app-menu__label">Tạo phiếu xuất
+                    kho</span></a></li>
+        <li><a class="app-menu__item ${search_export}" href="explore-lookup-page.html"><i
+                    class='app-menu__icon bx bx-search'></i><span class="app-menu__label">Tra cứu xuất kho
+                </span></a></li>
+        <li><a class="app-menu__item ${addImportCoupon}" href="AddImportCouponPage.html"><i
+                    class="app-menu__icon bx bx-plus-circle"></i><span class="app-menu__label">Tạo phiếu nhập
+                    kho</span></a></li>
+        <li><a class="app-menu__item ${ImportCouponPage}" href="ImportCouponPage.html"><i
+                    class='app-menu__icon bx bx-search'></i><span class="app-menu__label">Tra cứu nhập kho
+                </span></a></li>
+        <li><a class="app-menu__item ${PrintExportCoupon}" href="PrintExportPage.html"> <i class="fas fa-print">
+                </i><span class="app-menu__label">&nbsp;&nbsp;&nbsp; In phiếu xuất kho
+                </span></a></li>
+        <li><a class="app-menu__item ${PrintImportCoupon}" href="PrintImportPage.html"> <i class="fas fa-print">
+                </i><span class="app-menu__label">&nbsp;&nbsp;&nbsp; In phiếu nhập kho
+                </span></a></li>
+                <li>
+                <a class="app-menu__item ${editacc}" href="#"><i
+                        class="app-menu__icon bx bx-cog"></i><span class="app-menu__label">Quản lý hệ thống</span></a>
             </li>
-            <li>
-              <a class="app-menu__item" ${add_nhanvien} href="table-data-table.html"
-                ><i class="app-menu__icon bx bx-id-card"></i>
-                <span class="app-menu__label">Quản lý nhân viên</span></a
-              >
-            </li>
-          
-          </ul>
+    </ul>
             `
           break;
         case "inventoryManager":
@@ -137,26 +179,28 @@ function renderSideBar(page){
         </div>
         <hr>
         <ul class="app-menu">
-         
+
         <li><a class="app-menu__item ${index} " href="index.html"><i class='app-menu__icon bx bx-tachometer'></i><span
-        class="app-menu__label">Bảng điều khiển</span></a></li>
-          <li><a class="app-menu__item ${add_export}" href="add-export-coupon.html"><i class="app-menu__icon bx bx-plus-circle"></i><span
-              class="app-menu__label" >Tạo phiếu xuất kho</span></a></li>
-              <li><a class="app-menu__item ${search_export}" href="explore-lookup-page.html"><i class='app-menu__icon bx bx-search'></i><span
-                class="app-menu__label">Tra cứu xuất kho
-              </span></a></li>
-               <li><a class="app-menu__item ${addImportCoupon}" href="AddImportCouponPage.html"><i class="app-menu__icon bx bx-plus-circle"></i><span
-              class="app-menu__label" >Tạo phiếu nhập kho</span></a></li>
-         <li><a class="app-menu__item ${ImportCouponPage}" href="ImportCouponPage.html"><i class='app-menu__icon bx bx-search'></i><span
-                class="app-menu__label">Tra cứu nhập kho
-              </span></a></li>
-               <li><a class="app-menu__item ${PrintExportCoupon}" href="PrintExportPage.html"> <i class="fas fa-print"> </i><span
-                class="app-menu__label">&nbsp;&nbsp;&nbsp;  In phiếu xuất kho
-              </span></a></li>
-              <li><a class="app-menu__item ${PrintImportCoupon}" href="PrintImportPage.html"> <i class="fas fa-print"> </i><span
-                class="app-menu__label">&nbsp;&nbsp;&nbsp;  In phiếu nhập kho
-              </span></a></li>
-        </ul>
+                    class="app-menu__label">Bảng điều khiển</span></a></li>
+        <li><a class="app-menu__item ${add_export}" href="add-export-coupon.html"><i
+                    class="app-menu__icon bx bx-plus-circle"></i><span class="app-menu__label">Tạo phiếu xuất
+                    kho</span></a></li>
+        <li><a class="app-menu__item ${search_export}" href="explore-lookup-page.html"><i
+                    class='app-menu__icon bx bx-search'></i><span class="app-menu__label">Tra cứu xuất kho
+                </span></a></li>
+        <li><a class="app-menu__item ${addImportCoupon}" href="AddImportCouponPage.html"><i
+                    class="app-menu__icon bx bx-plus-circle"></i><span class="app-menu__label">Tạo phiếu nhập
+                    kho</span></a></li>
+        <li><a class="app-menu__item ${ImportCouponPage}" href="ImportCouponPage.html"><i
+                    class='app-menu__icon bx bx-search'></i><span class="app-menu__label">Tra cứu nhập kho
+                </span></a></li>
+        <li><a class="app-menu__item ${PrintExportCoupon}" href="PrintExportPage.html"> <i class="fas fa-print">
+                </i><span class="app-menu__label">&nbsp;&nbsp;&nbsp; In phiếu xuất kho
+                </span></a></li>
+        <li><a class="app-menu__item ${PrintImportCoupon}" href="PrintImportPage.html"> <i class="fas fa-print">
+                </i><span class="app-menu__label">&nbsp;&nbsp;&nbsp; In phiếu nhập kho
+                </span></a></li>
+    </ul>
               `;
               break;
         case "accounting":
