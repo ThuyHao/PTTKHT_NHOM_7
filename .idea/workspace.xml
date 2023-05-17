@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa4b9f1e-105e-4399-a09d-b6129150ec9a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/doc/AddImportCouponPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/ImportCouponPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/PrintExportPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/PrintImportPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/AddAsset.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/AddAsset.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/AssetManagerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/AssetManagerPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/AddImportCouponPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/AddImportCouponPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/Export-Coupon-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Export-Coupon-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/ImportCoupon.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/ImportCoupon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/ImportCouponPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/ImportCouponPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/UpdateKPI.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/UpdateKPI.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/add-export-coupon.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/add-export-coupon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/explore-lookup-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/explore-lookup-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/all-order-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/all-order-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/form-add-nhan-vien.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/form-add-nhan-vien.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/js/plugins/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/doc/js/plugins/sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/table-data-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/AccountManagerPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,20 +39,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/PTTKHT_NHOM_7",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PTTKHT_NHOM_7&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,6 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684251220660</updated>
       <workItem from="1684251221898" duration="4283000" />
+      <workItem from="1684329512595" duration="3116000" />
     </task>
     <servers />
   </component>
