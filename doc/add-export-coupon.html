@@ -324,8 +324,13 @@
         <button class="btn btn-save"  id="cancelButton" onclick="cancel()">Đồng ý</button>`;
         formInfo.style.display = "block";
       }else{
-        alert("Thêm thành công!");
-      
+      swal({
+        title: "Thông báo",
+        // icon: "success",
+        icon: "success",
+        text: "Thêm thành công",
+        buttons: ["Đồng ý"],
+      })
      
       }
   }
